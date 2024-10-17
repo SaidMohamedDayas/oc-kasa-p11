@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "../logo.svg";
+import logo from "../assets/images/logo.svg";
 
 const Header = () => {
   return (
-    <header>
+    <header className="header">
       {/* Logo */}
       <div>
-        <img src={logo} alt="Logo" />
+        <img className="header__logo" src={logo} alt="Logo" />
       </div>
       {/* Navigation */}
-      <nav>
+      <nav className="header__nav">
         <ul>
           <li>
             <a href="/">Accueil</a>

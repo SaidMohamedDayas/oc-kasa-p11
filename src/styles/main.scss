@@ -1,15 +1,30 @@
 @import "./variables";
 @import "./mixins";
+@import "./banner.scss";
+@import "../styles/home/home.scss";
+
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
 body {
   font-family: $font-family;
 }
 
-header {
+.header {
   @include flex-between;
-  padding: 20px;
+  padding: 20px 100px;
 
-  nav {
+  &__logo {
+    img {
+      width: 210.32px;
+      height: 68px;
+    }
+  }
+
+  &__nav {
     ul {
       @include flex-between;
       list-style: none;
@@ -34,7 +49,7 @@ header {
   text-align: center;
   font-size: 24px;
 
-  .footer__logo {
+  &__logo {
     width: 100%;
     padding: 20px;
 
@@ -43,4 +58,9 @@ header {
       height: 39.44px;
     }
   }
+}
+
+main {
+  // flex: 1;
+  padding: 20px 100px;
 }
