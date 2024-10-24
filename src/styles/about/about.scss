@@ -1,0 +1,27 @@
+.card-about {
+  background-color: rgba(246, 246, 246, 1);
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+.card-about h1 {
+  background-color: rgba(255, 96, 96, 1);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-about h1 span {
+  display: flex;
+}
+.card-about h1,
+.card-about p {
+  margin: 0;
+}
+.card-about h1,
+.card-about p {
+  padding: 15px;
+}
+.card-about p {
+  color: rgba(255, 96, 96, 1);
+}

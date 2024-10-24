@@ -2,6 +2,8 @@
 @import "./mixins";
 @import "./banner.scss";
 @import "../styles/home/home.scss";
+@import "../styles/about/about.scss";
+@import "../styles/components/toggle.scss";
 
 * {
   margin: 0;
@@ -37,10 +39,14 @@ body {
       li {
         margin: 0 10px;
 
-        a {
+        .link {
           text-decoration: none;
           color: $link-color;
           font-size: 24px;
+
+          &.active {
+            text-decoration: underline;
+          }
         }
       }
     }

@@ -1,7 +1,10 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom"; // Importer useLocation
 import logo from "../assets/images/logo.svg";
 
 const Header = () => {
+  const location = useLocation(); // Utiliser useLocation pour obtenir l'URL actuelle
+
   return (
     <header className="header">
       {/* Logo */}
@@ -12,10 +15,22 @@ const Header = () => {
       <nav className="header__nav">
         <ul>
           <li>
-            <a href="/">Accueil</a>
+            <Link
+              to="/"
+              className={`link ${location.pathname === "/" ? "active" : ""}`}
+            >
+              Accueil
+            </Link>
           </li>
           <li>
-            <a href="/about">À propos</a>
+            <Link
+              to="/about"
+              className={`link ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+            >
+              À propos
+            </Link>
           </li>
         </ul>
       </nav>
