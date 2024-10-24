@@ -1,12 +1,34 @@
-import React from "react";
+import { useState, useEffect } from "react";
 import Banner from "../components/Banner";
-import HomeGallery from "../components/HomeGallery";
+import HomeCard from "../components/HomeCard";
+import { useBanners } from "../context/BannerContext";
 
-function Home({ textBanner, imageBanner }) {
+function Home() {
+  const { homeBanner } = useBanners();
+  const [logements, setLogements] = useState([]);
+
+  const fetchLogements = async () => {
+    try {
+      const response = await fetch("/logements.json");
+      const data = await response.json();
+      setLogements(data);
+    } catch (error) {
+      console.log("Erreur lors de la récupération des logements", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchLogements();
+  }, []);
+
   return (
     <>
-      <Banner text={textBanner} image={imageBanner} />
-      <HomeGallery />
+      <Banner text={homeBanner.text} image={homeBanner.img} />
+      <section className="cards">
+        {logements.map((logement) => (
+          <HomeCard key={logement.id} logement={logement} />
+        ))}
+      </section>
     </>
   );
 }

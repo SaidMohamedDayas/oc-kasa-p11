@@ -1,10 +1,13 @@
 import React from "react";
 import Banner from "../components/Banner";
+import { useBanners } from "../context/BannerContext";
 
-function About({ textBanner, imageBanner }) {
+function About() {
+  const { aboutBanner } = useBanners();
+
   return (
     <>
-      <Banner text={textBanner} image={imageBanner} />
+      <Banner text={aboutBanner.text} image={aboutBanner.img} />
     </>
   );
 }

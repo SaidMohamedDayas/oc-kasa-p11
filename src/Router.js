@@ -1,73 +1,57 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Logement from "./pages/Logement";
 import NotFound from "./pages/NotFound";
-import Layout from "./components/Layout";
+import { BannerProvider } from "./context/BannerContext";
 
 const AppRouter = () => {
-  const [banners, setBanners] = useState({
-    homeBanner: {
-      img: "",
-      text: "",
-    },
-    aboutBanner: {
-      img: "",
-      text: "",
-    },
-  });
-
-  useEffect(() => {
-    setBanners({
-      homeBanner: {
-        img: require("./assets/images/eric-muhr.jpeg"),
-        text: "Chez vous, partout et ailleurs",
-      },
-      aboutBanner: {
-        img: require("./assets/images/kalen-emsley.jpeg"),
-        text: "",
-      },
-    });
-  }, []);
-
   return (
     <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Layout>
-              <Home
-                textBanner={banners.homeBanner.text}
-                imageBanner={banners.homeBanner.img}
-              />{" "}
-              {/* Composant enfant pour la route home */}
-            </Layout>
-          }
-        />
+      <BannerProvider>
+        <Routes>
+          {/* Route Home */}
+          <Route
+            path="/"
+            element={
+              <Layout>
+                <Home />
+              </Layout>
+            }
+          />
 
-        <Route
-          path="/about"
-          element={
-            <Layout>
-              <About
-                textBanner={banners.aboutBanner.text}
-                imageBanner={banners.aboutBanner.img}
-              />{" "}
-              {/* Composant enfant pour la route about */}
-            </Layout>
-          }
-        />
+          {/* Route About */}
+          <Route
+            path="/about"
+            element={
+              <Layout>
+                <About />
+              </Layout>
+            }
+          />
 
-        <Route
-          path="*"
-          element={
-            <Layout>
-              <NotFound /> {/* Composant enfant pour la route 404 */}
-            </Layout>
-          }
-        />
-      </Routes>
+          {/* Route Logement */}
+          <Route
+            path="/logement/:id"
+            element={
+              <Layout>
+                <Logement />
+              </Layout>
+            }
+          />
+
+          {/* Route 404 Not Found */}
+          <Route
+            path="*"
+            element={
+              <Layout>
+                <NotFound />
+              </Layout>
+            }
+          />
+        </Routes>
+      </BannerProvider>
     </Router>
   );
 };

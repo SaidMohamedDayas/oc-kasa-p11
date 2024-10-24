@@ -3,6 +3,11 @@
 @import "./banner.scss";
 @import "../styles/home/home.scss";
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #root {
   display: flex;
   flex-direction: column;
