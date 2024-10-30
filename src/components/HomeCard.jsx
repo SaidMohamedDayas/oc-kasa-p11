@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 const HomeCard = ({ logement }) => {
   // Récupération d'une image aléatoire parmi celles du logement ou pas ?
-  const randomIndex = Math.floor(Math.random() * logement.pictures.length);
-  const randomImage = logement.pictures[randomIndex];
+  // const randomIndex = Math.floor(Math.random() * logement.pictures.length);
+  // const randomImage = logement.pictures[randomIndex];
 
   return (
     <Link to={`/logement/${logement.id}`}>
       <article
         className="card"
-        style={{ backgroundImage: `url(${randomImage})` }}
+        style={{ backgroundImage: `url(${logement.pictures[0]})` }}
       >
         <div className="card__img"></div>
         <h2 className="card__title">{logement.title}</h2>

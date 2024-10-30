@@ -50,6 +50,15 @@ const AppRouter = () => {
               </Layout>
             }
           />
+
+          <Route
+            path="/notfound"
+            element={
+              <Layout>
+                <NotFound />
+              </Layout>
+            }
+          />
         </Routes>
       </BannerProvider>
     </Router>

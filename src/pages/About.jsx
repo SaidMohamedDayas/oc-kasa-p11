@@ -2,7 +2,7 @@ import React from "react";
 import Banner from "../components/Banner";
 import { useBanners } from "../context/BannerContext";
 import { useState, useEffect } from "react";
-import Toggle from "../components/Toggle";
+import Collapse from "../components/Collapse";
 
 function About() {
   const { aboutBanner } = useBanners();
@@ -27,7 +27,7 @@ function About() {
       <Banner text={aboutBanner.text} image={aboutBanner.img} />
       <section className="about-section">
         {aboutList.map((about, index) => (
-          <Toggle key={index} title={about.title} content={about.content} />
+          <Collapse key={index} title={about.title} content={about.content} />
         ))}
       </section>
     </>

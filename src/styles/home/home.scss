@@ -6,6 +6,14 @@
   background-color: #f6f6f6;
   border-radius: 25px;
   margin: 40px 0;
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+  }
 }
 
 .card {
@@ -16,6 +24,11 @@
   background-position: center;
   background-size: cover;
   position: relative;
+
+  @media (max-width: 480px) {
+    height: 255px;
+    padding: 10px;
+  }
 
   &:hover {
     cursor: pointer;

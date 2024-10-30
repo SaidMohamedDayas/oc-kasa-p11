@@ -3,7 +3,10 @@
 @import "./banner.scss";
 @import "../styles/home/home.scss";
 @import "../styles/about/about.scss";
-@import "../styles/components/toggle.scss";
+@import "../styles/components/collapse.scss";
+@import "../styles/logements/slider.scss";
+@import "../styles/logements/descriptions.scss";
+@import "../styles/notFound/notFound.scss";
 
 * {
   margin: 0;
@@ -24,10 +27,17 @@ body {
   @include flex-between;
   padding: 20px 100px;
 
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
+
   &__logo {
-    img {
-      width: 210.32px;
-      height: 68px;
+    width: 210.32px;
+    height: 68px;
+
+    @media (max-width: 480px) {
+      width: 145px;
+      height: 46px;
     }
   }
 
@@ -39,10 +49,19 @@ body {
       li {
         margin: 0 10px;
 
+        @media (max-width: 480px) {
+          margin: 0 5px;
+        }
+
         .link {
           text-decoration: none;
           color: $link-color;
           font-size: 24px;
+
+          @media (max-width: 480px) {
+            font-size: 12px;
+            text-transform: uppercase;
+          }
 
           &.active {
             text-decoration: underline;
@@ -69,9 +88,34 @@ body {
       height: 39.44px;
     }
   }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+    }
+  }
 }
 
 main {
-  // flex: 1;
   padding: 20px 100px;
+
+  @media (max-width: 480px) {
+    padding: 20px;
+  }
+}
+
+.collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 20px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
 }

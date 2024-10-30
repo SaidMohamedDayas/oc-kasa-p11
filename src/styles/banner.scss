@@ -3,12 +3,20 @@
   position: relative;
   margin-bottom: 20px;
 
+  @media (max-width: 480px) {
+    height: 111px;
+  }
+
   div {
     position: relative;
     height: 100%;
     overflow: hidden;
     border-radius: 25px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 480px) {
+      border-radius: 10px;
+    }
 
     img {
       width: 100%;
@@ -37,5 +45,14 @@
     font-weight: 700;
     z-index: 1;
     width: 100%;
+    text-align: center;
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+      text-align: left;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 90%;
+    }
   }
 }
