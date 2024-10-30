@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 
 import Descriptions from "../components/Logement/Descriptions";
 import Collapse from "../components/Collapse";
-import Stars from "../components/Logement/Stars";
 import Slider from "../components/Logement/Slider";
 
 function Logement() {
