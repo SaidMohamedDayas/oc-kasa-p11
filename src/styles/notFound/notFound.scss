@@ -14,7 +14,7 @@
     font-size: 288px;
     font-weight: 700;
 
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-mobile) {
       font-size: 96px;
     }
   }
@@ -23,7 +23,7 @@
     font-size: 36px;
     font-weight: 500;
 
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-mobile) {
       font-size: 18px;
     }
   }
@@ -34,7 +34,7 @@
     color: black;
     margin-bottom: 100px;
 
-    @media (max-width: 480px) {
+    @media (max-width: $breakpoint-mobile) {
       font-size: 14px;
     }
   }

@@ -7,7 +7,7 @@
   border-radius: 25px;
   margin: 40px 0;
 
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-mobile) {
     grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
     gap: 20px;
     padding: 0;
@@ -25,7 +25,7 @@
   background-size: cover;
   position: relative;
 
-  @media (max-width: 480px) {
+  @media (max-width: $breakpoint-mobile) {
     height: 255px;
     padding: 10px;
   }
