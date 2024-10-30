@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/oc-kasa-p11/static/css/main.d34d7923.css",
+    "main.js": "/oc-kasa-p11/static/js/main.fa29651b.js",
+    "static/js/453.8119ef5d.chunk.js": "/oc-kasa-p11/static/js/453.8119ef5d.chunk.js",
+    "static/media/kalen-emsley.jpeg": "/oc-kasa-p11/static/media/kalen-emsley.796d007cebdd47cc489b.jpeg",
+    "static/media/eric-muhr.jpeg": "/oc-kasa-p11/static/media/eric-muhr.0f820b85d9a6a7e177b3.jpeg",
+    "static/media/logo-footer.svg": "/oc-kasa-p11/static/media/logo-footer.a704cd7679e4c79056dcca5dc733d583.svg",
+    "static/media/logo.svg": "/oc-kasa-p11/static/media/logo.a5c76d8a1dac09edd59db36304e0bcfa.svg",
+    "index.html": "/oc-kasa-p11/index.html",
+    "main.d34d7923.css.map": "/oc-kasa-p11/static/css/main.d34d7923.css.map",
+    "main.fa29651b.js.map": "/oc-kasa-p11/static/js/main.fa29651b.js.map",
+    "453.8119ef5d.chunk.js.map": "/oc-kasa-p11/static/js/453.8119ef5d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d34d7923.css",
+    "static/js/main.fa29651b.js"
+  ]
+}
