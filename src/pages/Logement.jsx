@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Descriptions from "../components/Logement/Descriptions";
 import Collapse from "../components/Collapse";
 import Slider from "../components/Logement/Slider";
+import logementsData from "../data/logements.json";
 
 function Logement() {
   const [logement, setLogement] = useState({
@@ -18,24 +19,12 @@ function Logement() {
   let { id } = useParams();
 
   useEffect(() => {
-    fetch("/logements.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((datas) => {
-        const logementTrouve = datas.find((logement) => logement.id === id);
-        if (logementTrouve) {
-          setLogement(logementTrouve);
-        } else {
-          setLogementFound(false);
-        }
-      })
-      .catch((error) =>
-        console.log("Erreur lors de la récupération des logements", error)
-      );
+    const logementTrouve = logementsData.find((logement) => logement.id === id);
+    if (logementTrouve) {
+      setLogement(logementTrouve);
+    } else {
+      setLogementFound(false);
+    }
   }, [id]);
 
   if (!logementFound) {

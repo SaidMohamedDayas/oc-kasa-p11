@@ -2,23 +2,14 @@ import { useState, useEffect } from "react";
 import Banner from "../components/Banner";
 import HomeCard from "../components/HomeCard";
 import { useBanners } from "../context/BannerContext";
+import logementsData from "../data/logements.json";
 
 function Home() {
   const { homeBanner } = useBanners();
   const [logements, setLogements] = useState([]);
 
-  const fetchLogements = async () => {
-    try {
-      const response = await fetch("/logements.json");
-      const data = await response.json();
-      setLogements(data);
-    } catch (error) {
-      console.log("Erreur lors de la récupération des logements", error);
-    }
-  };
-
   useEffect(() => {
-    fetchLogements();
+    setLogements(logementsData);
   }, []);
 
   return (
