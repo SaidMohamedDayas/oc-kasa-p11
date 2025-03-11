@@ -47,9 +47,11 @@ function Slider({ slider }) {
           />
         ))}
         {/* Indicateur du numéro de l'image */}
-        <div className="slider__images__index">
-          {slideIndex + 1}/{sliderLength}
-        </div>
+        {sliderLength > 1 && (
+          <div className="slider__images__index">
+            {slideIndex + 1}/{sliderLength}
+          </div>
+        )}
       </div>
     </section>
   );
