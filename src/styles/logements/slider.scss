@@ -8,13 +8,13 @@
     top: 50%;
     transform: translate(0%, -50%);
     z-index: 10;
-    width: 96px;
-    height: 120px;
+    width: 46.68px;
+    height: 79.2px;
     cursor: pointer;
 
     @media (max-width: $breakpoint-mobile) {
-      width: 24px;
-      height: 24px;
+      width: 11.67px;
+      height: 19.8px;
     }
   }
 
